@@ -57,17 +57,26 @@ console.log(words);
 
 ## 🔌 API Endpoint
 
-ເມື່ອເປີດ Local Dev Server ທ່ານສາມາດເອີ້ນໃຊ້ API ໄດ້ຜ່ານ:
+ທ່ານສາມາດເອີ້ນໃຊ້ API ໄດ້ທັງແບບ Local ແລະ Online:
 
-* **URL:** `GET /api/lorem` ຫຼື `/lao-lorem/api/lorem`
-* **Query Parameters:**
-  * `type` (ຕົວເລືອກ: `paragraphs`, `sentences`, `words` - ຄ່າເລີ່ມຕົ້ນ: `paragraphs`)
-  * `count` (ຈຳນວນທີ່ຕ້ອງການສ້າງ - ຄ່າເລີ່ມຕົ້ນ: `3`)
+### 1. Online Production API (Vercel)
+* **URL:** `GET https://lao-lorem.vercel.app/api/lorem`
+* **ຕົວຢ່າງການເອີ້ນໃຊ້ (Example Request):**
+  ```bash
+  curl "https://lao-lorem.vercel.app/api/lorem?type=sentences&count=3"
+  ```
 
-**ຕົວຢ່າງການເອີ້ນໃຊ້ (Example Request):**
-```bash
-curl "http://localhost:5173/api/lorem?type=sentences&count=3"
-```
+### 2. Local Development API (Vite Dev Server)
+* **URL:** `GET /api/lorem` ຫຼື `/lao-lorem/api/lorem` (ເມື່ອເປີດ Local server)
+* **ຕົວຢ່າງການເອີ້ນໃຊ້ (Example Request):**
+  ```bash
+  curl "http://localhost:5173/api/lorem?type=sentences&count=3"
+  ```
+
+### ⚙️ Query Parameters:
+* `type` (ຕົວເລືອກ: `paragraphs`, `sentences`, `words` - ຄ່າເລີ່ມຕົ້ນ: `paragraphs`)
+* `count` (ຈຳນວນທີ່ຕ້ອງການສ້າງ - ຄ່າເລີ່ມຕົ້ນ: `3`)
+* `sentencesPerParagraph` (ຈຳນວນປະໂຫຍກຕໍ່ຍ່ອຍໜ້າ - ຄ່າເລີ່ມຕົ້ນ: `4`)
 
 ---
 

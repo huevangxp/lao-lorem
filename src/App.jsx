@@ -144,7 +144,7 @@ export default function App() {
           <h3 className="text-[0.75rem] uppercase tracking-[1.5px] text-[#555555]  font-normal">📦 ໃຊ້ເປັນ npm package</h3>
           <code className=" text-[0.85rem] bg-[#f4f4f4] border border-[#e0e0e0] px-4 py-[0.6rem] rounded-lg text-[#0056b3] block">npm install lao-lorem</code>
           <h3 className="text-[0.75rem] uppercase tracking-[1.5px] text-[#555555]  font-normal">🔌 API Endpoint</h3>
-          <code className=" text-[0.85rem] bg-[#f4f4f4] border border-[#e0e0e0] px-4 py-[0.6rem] rounded-lg text-[#0056b3] block">GET /api/lorem?type=paragraphs&amp;count=3</code>
+          <code className=" text-[0.85rem] bg-[#f4f4f4] border border-[#e0e0e0] px-4 py-[0.6rem] rounded-lg text-[#0056b3] block">GET https://lao-lorem.vercel.app/api/lorem?type=paragraphs&amp;count=3</code>
         </div>
       </main>
 
