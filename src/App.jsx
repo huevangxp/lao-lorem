@@ -42,7 +42,7 @@ export default function App() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse_at_center,#c8102e22_0%,transparent_70%)] pointer-events-none"></div>
         <div className="flex items-baseline justify-center gap-1 mb-3">
           <span className="text-[4rem] font-bold text-[#c8102e] leading-none tracking-[-2px]">ລາ</span>
-          <span className=" text-[2.8rem] font-bold text-[#111111] tracking-[-2px]">lorem</span>
+          <span className="text-[2.8rem] font-bold text-[#111111] tracking-[-2px]">lorem</span>
         </div>
         <p className="text-[#555555] text-[0.95rem] tracking-[0.5px]">Lorem Ipsum Generator ສຳລັບພາສາລາວ</p>
       </header>
@@ -51,7 +51,7 @@ export default function App() {
         {/* Controls */}
         <div className="flex flex-col sm:flex-row flex-wrap gap-5 sm:items-end bg-white border border-[#e0e0e0] rounded-2xl p-6 mb-5 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
           <div className="flex flex-col gap-2">
-            <label className="text-[0.72rem] uppercase tracking-[1.5px] text-[#555555] ">ປະເພດ</label>
+            <label className="text-[0.72rem] uppercase tracking-[1.5px] text-[#555555]">ປະເພດ</label>
             <div className="flex flex-wrap sm:flex-nowrap gap-[0.4rem]">
               {TYPES.map((t) => (
                 <button
@@ -59,7 +59,7 @@ export default function App() {
                   className={`flex items-center gap-[0.4rem] px-4 py-2 border rounded-lg cursor-pointer font-sans text-[0.85rem] transition-all duration-150 ${type === t.value ? "bg-[#c8102e15] border-[#c8102e] text-[#111111]" : "bg-transparent border-[#e0e0e0] text-[#555555] hover:text-[#111111] hover:border-[#999]"}`}
                   onClick={() => setType(t.value)}
                 >
-                  <span className=" text-[0.8rem] text-[#c8102e]">{t.icon}</span>
+                  <span className="text-[0.8rem] text-[#c8102e]">{t.icon}</span>
                   {t.label}
                 </button>
               ))}
@@ -67,12 +67,12 @@ export default function App() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-[0.72rem] uppercase tracking-[1.5px] text-[#555555] ">ຈຳນວນ {type === "paragraphs" ? "ຍ່ອຫນ້າ" : type === "sentences" ? "ປະໂຫຍກ" : "ຄຳ"}</label>
-            <div className="flex items-center gap-0 border border-[#e0e0e0] rounded-lg overflow-hidden">
-              <button className="w-9 h-9 bg-[#f0f0f0] border-none text-[#111111] text-[1.1rem] cursor-pointer transition-colors hover:bg-[#e0e0e0]" onClick={() => setCount((c) => Math.max(1, Number(c) - 1))}>−</button>
+            <label className="text-[0.72rem] uppercase tracking-[1.5px] text-[#555555]">ຈຳນວນ {type === "paragraphs" ? "ຍ່ອຫນ້າ" : type === "sentences" ? "ປະໂຫຍກ" : "ຄຳ"}</label>
+            <div className="flex items-center border border-[#e0e0e0] rounded-lg overflow-hidden">
+              <button className="w-9 h-9 flex items-center justify-center bg-[#f0f0f0] border-none text-[#111111] text-[1.1rem] cursor-pointer transition-colors hover:bg-[#e0e0e0] shrink-0" onClick={() => setCount((c) => Math.max(1, Number(c) - 1))}>−</button>
               <input 
                 type="number"
-                className="w-16 h-9 text-center text-base text-[#111111] bg-white border-y-0 border-x border-[#e0e0e0] outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" 
+                className="w-20 h-9 text-center text-base text-[#111111] bg-white border-l border-r border-[#e0e0e0] border-y-0 outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" 
                 value={count}
                 onChange={(e) => {
                   const val = e.target.value;
@@ -87,14 +87,14 @@ export default function App() {
                   if (count === '') setCount(1);
                 }}
               />
-              <button className="w-9 h-9 bg-[#f0f0f0] border-none text-[#111111] text-[1.1rem] cursor-pointer transition-colors hover:bg-[#e0e0e0]" onClick={() => setCount((c) => Math.min(1000, Number(c) + 1))}>+</button>
+              <button className="w-9 h-9 flex items-center justify-center bg-[#f0f0f0] border-none text-[#111111] text-[1.1rem] cursor-pointer transition-colors hover:bg-[#e0e0e0] shrink-0" onClick={() => setCount((c) => Math.min(1000, Number(c) + 1))}>+</button>
             </div>
           </div>
 
           {type === "paragraphs" && (
             <div className="flex flex-col gap-2">
-              <label className="text-[0.72rem] uppercase tracking-[1.5px] text-[#555555] ">HTML tags</label>
-              <button className={`px-4 py-2 border rounded-lg cursor-pointer text-[0.8rem]  transition-all duration-150 ${html ? "bg-[#c8102e15] border-[#c8102e] text-[#111111]" : "bg-[#f0f0f0] border-[#e0e0e0] text-[#555555]"}`} onClick={() => setHtml(!html)}>
+              <label className="text-[0.72rem] uppercase tracking-[1.5px] text-[#555555]">HTML tags</label>
+              <button className={`px-4 py-2 border rounded-lg cursor-pointer text-[0.8rem] transition-all duration-150 ${html ? "bg-[#c8102e15] border-[#c8102e] text-[#111111]" : "bg-[#f0f0f0] border-[#e0e0e0] text-[#555555]"}`} onClick={() => setHtml(!html)}>
                 {html ? "ເປີດ <p>" : "ປິດ"}
               </button>
             </div>
@@ -115,7 +115,7 @@ export default function App() {
           ) : (
             <>
               <div className="flex items-center justify-between px-5 py-3 border-b border-[#e0e0e0] bg-[#fafafa]">
-                <span className=" text-[0.75rem] text-[#777777]">
+                <span className="text-[0.75rem] text-[#777777]">
                   {result.length} {type === "paragraphs" ? "ຍ່ອຫນ້າ" : type === "sentences" ? "ປະໂຫຍກ" : "ຄຳ"}
                 </span>
                 <div className="flex gap-2">
@@ -127,7 +127,7 @@ export default function App() {
               </div>
 
               {html && type === "paragraphs" ? (
-                <pre className="p-6  text-[0.8rem] leading-[1.8] text-[#0056b3] whitespace-pre-wrap break-words">{getText()}</pre>
+                <pre className="p-6 text-[0.8rem] leading-[1.8] text-[#0056b3] whitespace-pre-wrap break-words">{getText()}</pre>
               ) : (
                 <div className="p-6 leading-loose text-[#333333] text-base space-y-4">
                   {result.map((para, i) => (
@@ -141,10 +141,10 @@ export default function App() {
 
         {/* API Info */}
         <div className="bg-white border border-[#e0e0e0] rounded-2xl p-6 flex flex-col gap-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
-          <h3 className="text-[0.75rem] uppercase tracking-[1.5px] text-[#555555]  font-normal">📦 ໃຊ້ເປັນ npm package</h3>
-          <code className=" text-[0.85rem] bg-[#f4f4f4] border border-[#e0e0e0] px-4 py-[0.6rem] rounded-lg text-[#0056b3] block">npm install lao-lorem</code>
-          <h3 className="text-[0.75rem] uppercase tracking-[1.5px] text-[#555555]  font-normal">🔌 API Endpoint</h3>
-          <code className=" text-[0.85rem] bg-[#f4f4f4] border border-[#e0e0e0] px-4 py-[0.6rem] rounded-lg text-[#0056b3] block">GET https://lao-lorem.vercel.app/api/lorem?type=paragraphs&amp;count=3</code>
+          <h3 className="text-[0.75rem] uppercase tracking-[1.5px] text-[#555555] font-normal">📦 ໃຊ້ເປັນ npm package</h3>
+          <code className="text-[0.85rem] bg-[#f4f4f4] border border-[#e0e0e0] px-4 py-[0.6rem] rounded-lg text-[#0056b3] block">npm install lao-lorem</code>
+          <h3 className="text-[0.75rem] uppercase tracking-[1.5px] text-[#555555] font-normal">🔌 API Endpoint</h3>
+          <code className="text-[0.85rem] bg-[#f4f4f4] border border-[#e0e0e0] px-4 py-[0.6rem] rounded-lg text-[#0056b3] block">GET https://lao-lorem.vercel.app/api/lorem?type=paragraphs&amp;count=3</code>
         </div>
       </main>
 
