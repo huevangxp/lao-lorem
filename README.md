@@ -15,7 +15,7 @@
 
 ```bash
 # 1. Clone project
-git clone https://github.com/yourusername/lao-lorem.git
+git clone https://github.com/huevangxp/lao-lorem.git
 cd lao-lorem
 
 # 2. ຕິດຕັ້ງ dependencies

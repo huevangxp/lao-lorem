@@ -150,7 +150,7 @@ export default function App() {
 
       <footer className="text-center mt-16 text-[#999999] text-[0.8rem] flex flex-col gap-2">
         <p>🇱🇦 Open Source · MIT License · Created by huevangxp</p>
-        <a className="text-[#777777] no-underline hover:text-[#111111]" href="https://github.com/yourusername/lao-lorem" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a className="text-[#777777] no-underline hover:text-[#111111]" href="https://github.com/huevangxp/lao-lorem" target="_blank" rel="noreferrer">GitHub ↗</a>
       </footer>
     </div>
   );
