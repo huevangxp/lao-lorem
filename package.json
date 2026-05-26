@@ -1,0 +1,48 @@
+{
+  "name": "lao-lorem",
+  "version": "1.0.0",
+  "description": "Lorem Ipsum Generator ສຳລັບພາສາລາວ 🇱🇦",
+  "author": "huevangxp <huevang770@gmail.com> (Tel: 78849378)",
+  "type": "module",
+  "main": "./src/core/generator.js",
+  "exports": {
+    ".": "./src/core/generator.js"
+  },
+  "files": [
+    "src/core/generator.js",
+    "src/data/lao-words.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.0",
+    "vite": "^5.4.2"
+  },
+  "keywords": [
+    "lao",
+    "lorem-ipsum",
+    "lorem",
+    "placeholder",
+    "text",
+    "generator",
+    "ລາວ"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/lao-lorem"
+  },
+  "homepage": "https://yourusername.github.io/lao-lorem"
+}
